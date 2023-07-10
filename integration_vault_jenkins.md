@@ -28,4 +28,22 @@ script:
   - export VARIABLE_2=$($VAULT_PLUGIN_CMD read -field=variable_2 secret/path/to/variables)
 # Rest of your pipeline steps...
 
+## End
+
+### Vault dans un job bash
+
+#!/bin/bash
+
+# Retrieve the username and password from Vault
+username=$(vault read -field=username secret/path/to/dockerhub)
+password=$(vault read -field=password secret/path/to/dockerhub)
+
+# Log in to hub.docker.com
+docker login -u "$username" -p "$password"
+
+# Build and push the Docker image
+docker build -t your-image .
+docker push your-image
+
+
 
