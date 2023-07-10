@@ -50,18 +50,30 @@ docker push your-image
 
 ##### Intégration 
 
-To configure your Jenkins jobs to retrieve variables from Vault, you can use plugins like "HashiCorp Vault Plugin" or "Vault Plugin" that integrate Jenkins with Vault. Here's a general overview of the steps involved:
+To configure your Jenkins jobs to retrieve variables from Vault, you can use plugins like "HashiCorp Vault 
+Plugin" or "Vault Plugin" that integrate Jenkins with Vault. Here's a general overview of the steps involved:
 
-    Install the Vault plugin: In the Jenkins dashboard, go to "Manage Jenkins" → "Manage Plugins" → "Available" tab. Search for the Vault plugin and install it.
+    Install the Vault plugin: In the Jenkins dashboard, go to "Manage Jenkins" → "Manage Plugins" → "Available" tab. 
+    Search for the Vault plugin and install it.
 
-    Configure the Vault plugin: Once the plugin is installed, go to "Manage Jenkins" → "Configure System" → "HashiCorp Vault" section. Add the Vault server URL, authentication method (token, AppRole, etc.), and other relevant details.
+    Configure the Vault plugin: Once the plugin is installed, go to "Manage Jenkins" → "Configure System" → "HashiCorp Vault" section.
+    Add the Vault server URL, authentication method (token, AppRole, etc.), and other relevant details.
 
     Create a Vault token: Generate a Vault token with appropriate access policies to retrieve the desired secrets or variables.
 
-    Configure Jenkins job: In your Jenkins job configuration, add a "Build Environment" step for the Vault plugin. Provide the Vault token or authentication details, and specify the secrets/variables paths you want to retrieve from Vault.
+    Configure Jenkins job: In your Jenkins job configuration, add a "Build Environment" step for the Vault plugin. 
+    Provide the Vault token or authentication details, and specify the secrets/variables paths you want to retrieve from Vault.
 
-    Use Vault variables in the job: In your Jenkins job, you can access the retrieved Vault secrets/variables as environment variables. For example, you can use ${VAULT_SECRET_NAME} to refer to a specific secret retrieved from Vault.
+    Use Vault variables in the job: In your Jenkins job, you can access the retrieved Vault secrets/variables as 
+    environment variables. For example, you can use ${VAULT_SECRET_NAME} to refer to a specific secret retrieved from Vault.
 
-By following these steps, your Jenkins job will authenticate with Vault, retrieve the desired secrets/variables, and make them available as environment variables for your job's execution.
+By following these steps, your Jenkins job will authenticate with Vault, retrieve the desired secrets/variables, 
+and make them available as environment variables for your job's execution.
+
+![image](https://github.com/borelsaffo/vault/assets/27947973/fdeda03d-5cdc-4d42-97c0-5c80fb7b0655)
+
+![image](https://github.com/borelsaffo/vault/assets/27947973/fe119eb4-c573-4a05-b26a-cdec193ad6a1)
+
+![image](https://github.com/borelsaffo/vault/assets/27947973/b2de220b-5d27-4aaa-a7d6-8dd52b09c3db)
 
 
