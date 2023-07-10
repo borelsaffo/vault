@@ -77,3 +77,6 @@ and make them available as environment variables for your job's execution.
 ![image](https://github.com/borelsaffo/vault/assets/27947973/b2de220b-5d27-4aaa-a7d6-8dd52b09c3db)
 
 
+![image](https://github.com/borelsaffo/vault/assets/27947973/37d365ec-e5b1-4363-8566-65df44e55b1c)
+
+
