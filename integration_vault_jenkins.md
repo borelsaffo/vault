@@ -8,6 +8,12 @@
 
 
 ### Vault dans Gitlab-ci
+
+before_script:
+  - apk add --update --no-cache ca-certificates curl
+  - curl -LsO https://github.com/hashicorp/vault-plugin/releases/latest/download/vault-plugin
+  - chmod +x vault-plugin
+
 variables:
   VAULT_ADDR: "https://vault.example.com"
   VAULT_PLUGIN_DOWNLOAD_URL: "https://github.com/hashicorp/vault-plugin/releases/latest/download/vault-plugin"
